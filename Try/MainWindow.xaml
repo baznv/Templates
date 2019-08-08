@@ -8,9 +8,14 @@
         Title="MainWindow" Height="450" Width="800">
     <Window.Resources>
         <ControlTemplate x:Key="ControlTemplateButton" TargetType="Button">
-            <Border BorderBrush="Orange" BorderThickness="3" CornerRadius="10" Background="Red" TextBlock.Foreground="White" >
+            <Border Name="Border" BorderBrush="Orange" BorderThickness="3" CornerRadius="10" Background="Red" TextBlock.Foreground="White" >
                 <ContentPresenter RecognizesAccessKey="True" Margin="{TemplateBinding Padding}"/>
-            </Border> 
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter TargetName="Border" Property="Background" Value="Green"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
         </ControlTemplate>
     </Window.Resources>
     <StackPanel>

@@ -1,0 +1,24 @@
+﻿<Window x:Class="Temp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Temp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel Background="LightGray">
+        <ComboBox Width="150" Height="60" Margin="15" DataContext="{StaticResource ComboBoxToggleButtonCover2}" Style="{StaticResource WhiteComboBox}">
+            <ComboBoxItem>1</ComboBoxItem>
+            <ComboBoxItem>2</ComboBoxItem>
+            <ComboBoxItem>3</ComboBoxItem>
+
+        </ComboBox>
+        <ComboBox Width="150" Height="60" Margin="15" DataContext="{StaticResource ComboBoxToggleButtonCover4}" Style="{StaticResource WhiteComboBox}">
+            <ComboBoxItem>1</ComboBoxItem>
+            <ComboBoxItem>2</ComboBoxItem>
+            <ComboBoxItem>3</ComboBoxItem>
+
+        </ComboBox>
+
+    </StackPanel>
+</Window>

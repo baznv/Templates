@@ -24,5 +24,13 @@ namespace Try
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            ResourceDictionary newDictionary = new ResourceDictionary();
+            newDictionary.Source = new Uri("Style2.xaml", UriKind.Relative);
+            this.Resources.MergedDictionaries[0] = newDictionary;
+            //Application.Current.Resources.MergedDictionaries[0] = newDictionary;
+        }
     }
 }

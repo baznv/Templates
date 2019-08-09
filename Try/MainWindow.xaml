@@ -7,18 +7,22 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Window.Resources>
-        <ControlTemplate x:Key="ControlTemplateButton" TargetType="Button">
-            <Border Name="Border" BorderBrush="Orange" BorderThickness="3" CornerRadius="10" Background="Red" TextBlock.Foreground="White" >
-                <ContentPresenter RecognizesAccessKey="True" Margin="{TemplateBinding Padding}"/>
-            </Border>
-            <ControlTemplate.Triggers>
-                <Trigger Property="IsMouseOver" Value="True">
-                    <Setter TargetName="Border" Property="Background" Value="Green"/>
-                </Trigger>
-            </ControlTemplate.Triggers>
-        </ControlTemplate>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Style1.xaml"></ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Window.Resources>
+
     <StackPanel>
-        <Button Content="Click _me" Margin="10" Padding="5" Template="{StaticResource ControlTemplateButton}" Width="100" />
+        <Button Content="Click _me" Margin="10" Padding="5" Width="100" Click="Button_Click" />
+        <ListBox >
+            <ListBoxItem >LG Nexus 5X</ListBoxItem>
+            <ListBoxItem>Huawei Nexus 6P</ListBoxItem>
+            <ListBoxItem >iPhone 6S</ListBoxItem>
+            <ListBoxItem>iPhone 6S Plus</ListBoxItem>
+            <ListBoxItem >Аsus Zenphone 2</ListBoxItem>
+            <ListBoxItem>Microsoft Lumia 950</ListBoxItem>
+        </ListBox>
     </StackPanel>
 </Window>

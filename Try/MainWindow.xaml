@@ -5,24 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Try"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Window.Resources>
+        Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <!--<Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Style1.xaml"></ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
-    </Window.Resources>
+    </Window.Resources>-->
+    <ScrollViewer HorizontalScrollBarVisibility="Visible">
+        <StackPanel >
+            <Button Content="Click _me" Margin="10" Padding="5" Width="1000" Click="Button_Click" />
+            <Button Content="BigButton" Margin="10" Padding="5" Width="200" Height="200" Style="{StaticResource BigButtonStyle}" />
 
-    <StackPanel>
-        <Button Content="Click _me" Margin="10" Padding="5" Width="100" Click="Button_Click" />
-        <ListBox >
-            <ListBoxItem >LG Nexus 5X</ListBoxItem>
-            <ListBoxItem>Huawei Nexus 6P</ListBoxItem>
-            <ListBoxItem >iPhone 6S</ListBoxItem>
-            <ListBoxItem>iPhone 6S Plus</ListBoxItem>
-            <ListBoxItem >Аsus Zenphone 2</ListBoxItem>
-            <ListBoxItem>Microsoft Lumia 950</ListBoxItem>
-        </ListBox>
-    </StackPanel>
+            <ListBox Height="150" Width="300" ItemsSource="{Binding ObsString}"/>
+
+
+        </StackPanel>
+    </ScrollViewer>
 </Window>
